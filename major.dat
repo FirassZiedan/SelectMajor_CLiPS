@@ -1,0 +1,90 @@
+(node (name root) (type decision) (question "are your scores is good ?") (yes-node node1) (no-node node2) (answer nil))
+;;;;;;;;;;yes root
+(node (name node1) (type decision) (question "you can study for long time ?") (yes-node node12) (no-node node13) (answer nil))
+;;;yes long-time
+(node (name node12) (type decision) (question "Do you like math?") (yes-node node45) (no-node node46) (answer nil))
+      (node (name node45) (type decision) (question "do you like Physics?") (yes-node node15) (no-node node14) (answer nil))
+           (node (name node47) (type decision) (question "do you like Universe?") (yes-node node49) (no-node node50) (answer nil))
+		       (node (name node49) (type answer) (question nil) (yes-node nil) (no-node nil) (answer astrophysics))
+               (node (name node50) (type answer) (question nil) (yes-node nil) (no-node nil) (answer nuclear-physics))  
+           (node (name node48) (type decision) (question "do you have problem with long computation?") (yes-node node51) (no-node node52) (answer nil))
+	      		   (node (name node51) (type decision) (question "do you have problem with computerb for long time?") (yes-node node53) (no-node node54) (answer nil))
+				      (node (name node53) (type answer) (question nil) (yes-node nil) (no-node nil) (answer computer-Scince)) 
+                      (node (name node54) (type decision) (question "do you have analysis skill?") (yes-node node55) (no-node node56) (answer nil))
+					     (node (name node55) (type answer) (question nil) (yes-node nil) (no-node nil) (answer Software-engineering))
+			             (node (name node56) (type answer) (question nil) (yes-node nil) (no-node nil) (answer Computer-Iformation-Systems))
+					     
+		           (node (name node52) (type answer) (question nil) (yes-node nil) (no-node nil) (answer Electronic-Engineer)) 
+	  
+	  
+	  
+      (node (name node46) (type decision) (question "do you like chemistry?") (yes-node node57) (no-node node58) (answer nil))
+	      (node (name node57) (type answer) (question nil) (yes-node nil) (no-node nil) (answer chemistry))
+		  (node (name node58) (type decision) (question "are you curious to come to see more of the universe?") (yes-node node59) (no-node node60) (answer nil))
+              (node (name node59) (type answer) (question nil) (yes-node nil) (no-node nil) (answer physics))
+              (node (name node60) (type decision) (question "do you have problems in dealing with people who are sick ?") (yes-node node61) (no-node node62) (answer nil))
+                  (node (name node61) (type answer) (question nil) (yes-node nil) (no-node nil) (answer medicine))
+                  (node (name node62) (type decision) (question "can you draw?") (yes-node node63) (no-node node64) (answer nil))
+				      (node (name node63) (type decision) (question "do you have a ceative imagination ?") (yes-node node65) (no-node node66) (answer nil))
+					      (node (name node65) (type answer) (question nil) (yes-node nil) (no-node nil) (answer architects-Engineer))
+						  (node (name node66) (type answer) (question nil) (yes-node nil) (no-node nil) (answer Civil-Engineer))
+					  
+					  (node (name node64) (type answer) (question nil) (yes-node nil) (no-node nil) (answer Electronic-Engineer))
+;;; no long-time 
+(node (name node13) (type decision) (question "do you like math?") (yes-node node15) (no-node node14) (answer nil))
+
+(node (name node14) (type decision) (question "do you have ability to deal with the computer?") (yes-node node15) (no-node node16) (answer nil))
+
+(node (name node15) (type decision) (question "are you use a computer programs?") (yes-node node17) (no-node node18) (answer nil))
+   (node (name node17) (type decision) (question "can you tying in keyboard quickly?") (yes-node node19) (no-node node20) (answer nil))
+          (node (name node19) (type answer) (question nil) (yes-node nil) (no-node nil) (answer Computer-Scince))
+		  (node (name node20) (type decision) (question "are you have analysis skill ?") (yes-node node21) (no-node node22) (answer nil))
+                (node (name node21) (type answer) (question nil) (yes-node nil) (no-node nil) (answer Software-engineering))
+				(node (name node22) (type answer) (question nil) (yes-node nil) (no-node nil) (answer Computer-Iformation-Systems))
+
+
+  (node (name node18) (type decision) (question "are you like computer gaming ?") (yes-node node23) (no-node node24) (answer nil))
+      (node (name node23) (type answer) (question nil) (yes-node nil) (no-node nil) (answer Gaming-Design))
+      (node (name node24) (type answer) (question nil) (yes-node nil) (no-node nil) (answer Computer-Iformation-Systems)) 
+
+
+(node (name node16) (type decision) (question "do you feel comfortable in the routine work?") (yes-node node25) (no-node node26) (answer nil))
+      (node (name node25) (type decision) (question "do you have a  concentration at work ?") (yes-node node27) (no-node node28) (answer nil))
+	      (node (name node27) (type answer) (question nil) (yes-node nil) (no-node nil) (answer Accounting ))
+          (node (name node28) (type answer) (question nil) (yes-node nil) (no-node nil) (answer business-management))
+	  
+	  (node (name node26) (type decision) (question "can you work on something for long time ?") (yes-node node29) (no-node node30) (answer nil))
+           (node (name node29) (type decision) (question "can you drawing?") (yes-node node31) (no-node node32) (answer nil))
+		      (node (name node31) (type answer) (question nil) (yes-node nil) (no-node nil) (answer Graphic-Design ))
+		      (node (name node32) (type decision) (question "are you heard about Immanuel Kant?") (yes-node node33) (no-node node34) (answer nil))
+			     (node (name node33) (type answer) (question nil) (yes-node nil) (no-node nil) (answer philosophy ))
+				 (node (name node34) (type decision) (question "are you have writing skills?") (yes-node node35) (no-node node42) (answer nil))
+				     (node (name node35) (type answer) (question nil) (yes-node nil) (no-node nil) (answer translater ))
+					 (node (name node42) (type answer) (question nil) (yes-node nil) (no-node nil) (answer analysis ))
+					 
+		   (node (name node30) (type decision) (question "Do you have the ability to learn a new language ?") (yes-node node36) (no-node node37) (answer nil))
+                (node (name node36) (type decision) (question "are you good in English language ?") (yes-node node38) (no-node node41) (answer nil))
+				   (node (name node38) (type decision) (question "Do you like franch?") (yes-node node39) (no-node node40) (answer nil))
+				      (node (name node39) (type answer) (question nil) (yes-node nil) (no-node nil) (answer Franch-language))
+                      (node (name node40) (type answer) (question nil) (yes-node nil) (no-node nil) (answer Italen-language))
+				   (node (name node41) (type answer) (question nil) (yes-node nil) (no-node nil) (answer English-language)) 
+				
+				(node (name node37) (type decision) (question "Do you have problems with childrens ?") (yes-node node43) (no-node node44) (answer nil))
+                   (node (name node43) (type answer) (question nil) (yes-node nil) (no-node nil) (answer Narsing ))
+                   (node (name node44) (type answer) (question nil) (yes-node nil) (no-node nil) (answer teacher))
+					  
+					  
+					  
+					  
+;;;;;;;; no root 
+(node (name node2) (type decision) (question "do you prefer manual labor ?") (yes-node node3) (no-node node4) (answer nil))
+(node (name node3) (type answer) (question nil) (yes-node nil) (no-node nil) (answer manual-occuations))
+(node (name node4) (type decision) (question "do you like math?") (yes-node node5) (no-node node6) (answer nil))
+(node (name node5) (type decision) (question "do you have the skill declamation?") (yes-node node7) (no-node node6) (answer nil))
+(node (name node7) (type answer) (question nil) (yes-node nil) (no-node nil) (answer teacher))
+(node (name node6) (type decision) (question "Do you have the ability to learn a new language?") (yes-node node8) (no-node node9) (answer nil))
+(node (name node8) (type answer) (question nil) (yes-node nil) (no-node nil) (answer Franch-language))
+(node (name node9) (type decision) (question "are you female?") (yes-node node10) (no-node node11) (answer nil))
+(node (name node10) (type answer) (question nil) (yes-node nil) (no-node nil) (answer Secretariat))
+(node (name node11) (type answer) (question nil) (yes-node nil) (no-node nil) (answer hotel-management))
+
